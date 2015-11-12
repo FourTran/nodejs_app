@@ -15,7 +15,7 @@ var io = require('socket.io').listen(server);
 app.get('/', function(req, res){
 	fs.createReadStream('index.html').pipe(res);
 });
-
+console.log("Server is listenning on http://localhost:4444");
 // sockets
 io.sockets.on('connection', function(client) {
 	client.on('message:client', function(data ){
