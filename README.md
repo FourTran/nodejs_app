@@ -1,15 +1,15 @@
 # nodejs_app.
 ## software nessary.
 ```sh
-node js.
-npm.
+nodejs
+npm
 ```
 ## run
 #### inside every directory.
 ```sh
- npm install .
-node index.js.
+npm install 
+node index.js or npm start
 ```
 #### on browser .
-http://localhost:4444.
+http://localhost:4444
 ### enjoy it.

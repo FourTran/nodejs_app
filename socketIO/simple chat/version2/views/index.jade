@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title = 'simple chat'
+		script(src = '/js/jquery.js')
+		script(src = '/js/script.js')
+		link(rel="stylesheet", type="text/css", href="/css/style.css")
+		link(rel="stylesheet", type="text/css", href="/css/bootstrap.min.css")
+	body
+		.container-fluid
+			.container
+				.chat
+					ul(id=message)
+					form
+						input(
+							type="text"
+                            name="message"
+                            placeholder="input message"
+						)
