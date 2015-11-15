@@ -1,10 +1,10 @@
 {
-  "name": "version2",
-  "version": "1.0.1",
-  "description": "simple chat with express , socket.io, jade",
+  "name": "soccer",
+  "version": "1.0.0",
+  "description": "\"simple soccer website\"",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "node index.js"
   },
   "author": "Four Tran",
   "license": "ISC",
