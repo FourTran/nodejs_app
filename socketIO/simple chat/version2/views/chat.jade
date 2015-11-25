@@ -1,0 +1,64 @@
+doctype html
+html
+	head
+		title private chat room
+		link(rel='stylesheet', type='text/css', href='/css/chatroom.css')
+		link(rel='stylesheet', type='text/css', href='/css/bootstrap.min.css')
+		
+	body(style='background-color:#f0f1f3;')
+		header.banner
+			h1.bannertext
+				a#logo(href='#')
+					span 4 
+					| chat room
+		section.section
+			.connected(style='display:block;')
+				img#creatorImage(src='/images/creator.jpg')
+				.infoConnected
+					h2 Who are you?
+					br
+					form.loginForm
+						input#yourName(type='text',placeholder='Your nick name')
+						br
+						input#yourEnter(type='submit',value='ENTER')
+			.personInSide
+				img#ownerImage(src='/images/creator.jpg')
+				.infoInside
+					h2 Chat with 
+						span.nickname-chat
+					br
+					form.loginForm
+						input#otherName(type='text',placeholder='Your nick name')
+						br
+						input#otherEnter(type='submit',value='Chat')
+			.invited-textfield
+				h2 invite your friend by sending them this URL
+				.link
+					a#link(title='Invite a friend' href='')
+			.left
+				img#leftImage(src='/images/creator.jpg')
+				.info
+					h2
+						span.nickname-left
+						|has left this chat.
+					h5 invite somebody else by sending them this page.
+			.tooManyPeople
+				h2 Oops, you can not join this chat !
+				h5 there are two people already
+				a#room(title='new room',href='/create') newroom |?
+			.noMessage
+				img#noMessageImage(src='/images/unnamed.jpg')
+				.info
+					h2 you are chatting with 
+						span.nickname-chat
+					h5 send them a message from the form below !
+			.chatscreen
+				ul.chats
+		footer
+			form#chatform
+				textarea#message(placeholder='type your message')
+				input#submit(type='submit',value='SEND')
+		script(src='/js/jquery.js')
+		script(src='/js/moment.min.js')
+		script(src='/js/socket.io.js')
+		script(src='/js/chat.js')

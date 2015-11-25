@@ -1,9 +1,11 @@
 /**
-| simplechat/version2/app.js
-| Four Tran
-| tranvantubk@gmail.com
-| Demonstrate a chat server using socket.io + jade
+* soccer
+* Author : Four Tran
+* email : tranvantubk@gmail.com
+* simple project make a soccer website
+*
 **/
+
 
 var fs =  require('fs');
 var express = require('express');
@@ -20,8 +22,10 @@ app.use(express.static(path.join(__dirname,'public')));
 app.get('/', function(req, res){
 	res.render('index')
 });
-
-/*------------- sockets ---------------*/
+app.get('/test',function(req, res){
+	res.render('test')
+});
+// sockets
 io.sockets.on('connection', function(client) {
 	client.on('message:client', function(data ){
 		client.broadcast.emit('message:server',{message: data.message});

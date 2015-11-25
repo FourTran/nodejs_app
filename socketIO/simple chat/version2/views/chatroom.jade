@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title  chat room demo
+		script(src='/js/jquery.js')
+		script(src='/js/socket.io.js')
+		link(rel='stylesheet', type='text/css', href='/css/chatroom.css')
+		link(rel='stylesheet', type='text/css', href='/css/bootstrap.min.css')
+	body
+		header.homebanner
+			h1.homebannertext
+				a#logo(href="https://github.com/FourTran/nodejs_app") chat room
+		section
+			.homesection
+				.node
+					img#mylogo(src='/images/nodejslogo.png' atl='mylogo')
+					h2#chat the power of node
+				a#create(title='create' href='/create')
+					#createbutton
+						#little Create a private
+						#big chat room
