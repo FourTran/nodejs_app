@@ -6,8 +6,12 @@ npm
 ```
 ##         run
 #### inside every directory.
+install
 ```sh
-npm install 
+npm install
+```
+run
+```sh
 node index.js or npm start
 ```
 #### on browser .
